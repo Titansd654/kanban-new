@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { KanbanBoardInterface } from '../../types/kanban.interface';
 
 @Component({
   selector: 'app-main-content',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainContentComponent implements OnInit {
 
-  kanbanBoard = {
+  kanbanBoard: KanbanBoardInterface = {
     boards: [
       {
         id: 1,
@@ -63,7 +64,6 @@ export class MainContentComponent implements OnInit {
             id: 3,
             title: 'DONE',
             order: 3, 
-            colorIconId: 3,
             iconColor: 'green',
             tasks: [
               {
@@ -132,7 +132,6 @@ export class MainContentComponent implements OnInit {
             id: 3,
             title: 'DONE',
             order: 3, 
-            colorIconId: 3,
             iconColor: 'green',
             tasks: [
               {
